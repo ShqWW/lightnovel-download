@@ -17,6 +17,18 @@ import zipfile
 import shutil
 import numpy as np
 
+import argparse
+
+def parse_args():
+    """Parse input arguments."""
+    parser = argparse.ArgumentParser(description='config')
+    parser.add_argument('--color_page', default=1, type=int)
+    parser.add_argument('--book_no', default='0000', type=str)
+    parser.add_argument('--bool_cls', default='1', type=str)
+    parser.add_argument('--volumn_no', default='1', type=str)
+    args = parser.parse_args()
+    return args
+
 
 class Editer(object):
     def __init__(self, root_path, book_no='0000', book_cls='1', volume_no=1):
@@ -209,8 +221,9 @@ class Editer(object):
         
 
 if __name__=='__main__':
-    color_page_num = 2542
-    editer = Editer(root_path='out', book_no='2542', book_cls='2', volume_no=5)
+    args = parse_args()
+    color_page_num = args.color_page
+    editer = Editer(root_path='out', book_no=args.book_no, book_cls=args.book_cls, volume_no=args.volumn_no)
 
     print('正在获取书籍信息....')
     volume = editer.get_index_url()
