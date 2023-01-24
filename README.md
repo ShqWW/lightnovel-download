@@ -18,7 +18,7 @@
 
 1. 手动获取基本信息
 
-&ensp; &ensp; 通过浏览器打开要下载的小说页面（以“月姬”为例），点击“小说目录”：
+&ensp; &ensp; 通过浏览器打开要下载的小说页面（以“空之境界”为例），点击“小说目录”：
 ![](/fig/1.png)
 
 
@@ -58,7 +58,8 @@ python lightnovel.py --book_cls 0 --book_no 112 --volumn_no 2 --color_page 2
 &ensp; &ensp; 输入命令开始下载打包：
 ![](/fig/6.png)
 
-最后在"out"文件夹下就可以找到EPUB格式的书籍文件了！！！
+&ensp; &ensp; 下载脚本会自动获取书籍的一些作者标题信息。
+&ensp; &ensp; 最后在"out"文件夹下就可以找到EPUB格式的书籍文件了！！！
 
 
 
