@@ -24,8 +24,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description='config')
     parser.add_argument('--color_page', default=1, type=int)
     parser.add_argument('--book_no', default='0000', type=str)
-    parser.add_argument('--bool_cls', default='1', type=str)
-    parser.add_argument('--volumn_no', default='1', type=str)
+    parser.add_argument('--book_cls', default='1', type=str)
+    parser.add_argument('--volumn_no', default='1', type=int)
     args = parser.parse_args()
     return args
 
