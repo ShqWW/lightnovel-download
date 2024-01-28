@@ -30,7 +30,7 @@
 
 图形界面使用[PyQt-Fluent-Widgets](https://pyqt-fluent-widgets.readthedocs.io/en/latest/index.html)界面编写。
 
-[release](https://github.com/ShqWW/bilinovel-download/releases/tag/downloader)页面发布了已经打包好的exe可执行程序，包括图形化版本和命令行版本(系统最低要求Windows 10)。
+[release](https://github.com/ShqWW/lightnovel-download/releases/tag/downloader)页面发布了已经打包好的exe可执行程序，包括图形化版本和命令行版本(系统最低要求Windows 10)。
 
 界面样例：
 <div align="center">
@@ -38,7 +38,6 @@
   <img src="resource/example2.png" width="400"/>
 </div>
 
-PS：暂不支持漫画的排版（本来也没几个漫画<
 ## 使用前安装需要的包
 ```
 pip install -r requirements.txt -i https://pypi.org/simple/
@@ -63,6 +62,15 @@ pyinstaller -F -w -i .\resource\logo.png --paths=C:\Users\haoru\bilinovel-downlo
 ```
 pyinstaller -F -i .\resource\logo.png --paths=C:\Users\haoru\bilinovel-download .\lightnovel.py --clean
 ```
+
+## 相关项目：
+
+* [轻小说文库EPUB下载器](https://github.com/ShqWW/lightnovel-download)
+
+* [哔哩轻小说EPUB下载器](https://github.com/ShqWW/bilinovel-download)
+
+* [拷贝漫画EPUB下载器](https://github.com/ShqWW/copymanga-download)
+
 
 
 ## EPUB书籍编辑和管理工具推荐：
