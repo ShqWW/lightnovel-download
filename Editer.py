@@ -20,11 +20,10 @@ import pickle
 lock = threading.RLock()
 
 class Editer(object):
-    def __init__(self, root_path, head='https://www.wenku8.net', book_no='0000', volume_no=1):
-        
-        self.header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47', 'referer': head}
+    def __init__(self, root_path, book_no='0000', volume_no=1):
+        self.url_head = 'https://www.wenku8.net' 
+        self.header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47', 'referer': self.url_head}
 
-        self.url_head = head
         self.main_page = f'{self.url_head}/book/{book_no}.htm'
         self.color_chap_name = '插图'
         self.color_page_name = '彩页'
@@ -55,6 +54,7 @@ class Editer(object):
         
     # 获取html文档内容
     def get_html(self, url, is_gbk=False):
+        time.sleep(1)
         while True:
             req = requests.get(url, headers=self.header)
             if is_gbk:
